@@ -1,0 +1,25 @@
+<script type="text/javascript">
+	 /* Tipo object no JS - É uma coleção de dados no formato - chave:valor, dentro de chaves {}, também é dinâmica e heterogênia */
+        /* Sintaxe: 
+        tipo(let/var/const) obj = {
+        	chave:valor,
+        	chavex:valorx, ...
+        }*/
+
+		const cliente = {
+			nome:"Lucas Oliveira",
+			idade:30,
+			altura:1.60,
+			endereco:{
+              rua:"13 de maio",
+              numero:"S/N",
+              cidade:"Iguatu"} 
+		}
+       console.log(cliente); // Propriedades do OBJ
+       console.log(cliente.nome);
+       console.log(cliente.altura); 
+       console.log("-- Modificando um valor do OBJ -- ");
+       cliente.altura = 1.70;  
+       console.log(cliente); // Propriedades do OBJ
+       console.log(cliente.endereco.numero);
+</script>
