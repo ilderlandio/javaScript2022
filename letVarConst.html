@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Tipos let Var e Const </title>
+</head>
+<body>
+  <script>
+  	var idade = 25; // global
+  	function alteraIdade(){
+        idade = 30; 
+  	}
+    alteraIdade(); 
+    console.log(idade); // out: 30
+    console.log("---------");
+    function alterarNome(){
+    	var nome = "José"; // escopo local/função
+    }
+   // console.log(nome); // Erro de escopo
+
+   let salario = 1250; 
+   // let salario = 1200; 
+
+   {
+   	 let cpf = "237.456.633-15"; // escopo bloco/local
+   	 console.log(cpf);
+   }
+   // console.log(cpf); 
+
+   let logica = Boolean(true); 
+   if(logica){
+   	let CEP = "63500-773"; 
+   	console.log(CEP);
+   }else{
+   	let CEP = "63500-106";
+   	console.log(CEP);
+   }
+  // console.log(CEP); 
+  console.log("-- Constante --");
+  const pi = 3.14; 
+  //pi = 4; // é para ter erro
+
+// constantes em JS são mutáveis
+  const obj = {
+  	curso01:"Informática",
+  	curso02:"Administração"
+  }
+  
+  obj.curso02 = "Enfermagem"; 
+
+  console.log(obj.curso02); // Enfermagem
+  console.log(obj); // estrutura inteira do obj
+
+  console.log("----- Vetores do tipo constantes mutáveis ---- "); 
+
+  const vetor = ["Amélia",3,360]; 
+  console.log(vetor[2]); // saída é 360
+  vetor[2] = 357; // modifico valor de uma posição do vetor
+  console.log(vetor); // estrutura do vetor
+  </script>
+</body>
+</html>

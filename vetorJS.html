@@ -1,0 +1,34 @@
+<script type="text/javascript">
+	const meuVetor = ["Mariana",18,2800,false]; 
+
+	console.log(`Salário:${meuVetor[2]}`);
+
+	const meyArray = ["Notebook",
+	                 {CPU:"i3",RAM:"4GB",AMS:"SSD"},
+	                 1800];
+     console.log(meyArray[0]); // Notebook
+     console.log(meyArray[1].AMS); // SSD
+     console.log(meyArray[2]); // 1800
+	 meyArray.pop(); // remove o último elemento  
+     console.log(meyArray); 
+     meyArray.push(2400); // insere um elemento
+     console.log(meyArray); 
+     console.log(meyArray.length); // tamanho do vetor 
+
+     delete meyArray[1]; // apaga o objeto do vetor
+     console.log(meyArray);
+
+     console.log(typeof meyArray);
+
+     let dezenas = [10,30,50,60,70,90,100];
+     //console.log(dezenas[2]);
+    
+    //Percorrer e pegar os valores do vetor de forma automática
+     size = dezenas.length; 
+     for(i=0;i<size;i++){
+         console.log(dezenas[i]); 
+        }    
+
+	// Escolha a linha de códido abaixo que imprime a quantidade de memória RAM do computar acima. 
+	// console.log(meyArray[1].RAM);  
+</script>

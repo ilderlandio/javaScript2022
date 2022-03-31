@@ -10,10 +10,15 @@
 			nome:"Lucas Oliveira",
 			idade:30,
 			altura:1.60,
+            profissao:["Técnico","Engenheiro","Médico"],
 			endereco:{
               rua:"13 de maio",
               numero:"S/N",
-              cidade:"Iguatu"} 
+              cidade:"Iguatu"},
+            comprar:function(n1=5,n2=4){ 
+               let media = (n1 + n2)/2; 
+               console.log(media);
+           } 
 		}
        console.log(cliente); // Propriedades do OBJ
        console.log(cliente.nome);
@@ -22,4 +27,24 @@
        cliente.altura = 1.70;  
        console.log(cliente); // Propriedades do OBJ
        console.log(cliente.endereco.numero);
+       console.log('-- Método de um objeto --'); 
+       cliente.comprar(2,4); 
+       console.log('-- Adicionando propriedades ao OBJ --');
+       cliente.filhos = true; 
+       console.log(cliente); 
+       delete cliente.altura; // deletando propriedade
+       console.log(cliente);
+       // impede alterações no objeto
+       Object.freeze(cliente);
+       cliente.nome = "Maria Pereira"; //não altera o nome
+       console.log(cliente); // mostra que não alterou
+       // acessando prop do tipo vetor
+       console.log(cliente.profissao[1]); 
+
+// Se quiser criar um objeto inalterável
+       const newObj = Object.freeze({
+                nome:"Maria",
+                idade:16
+            }); 
+        newObj.nome = "João"; // não serve de nada  
 </script>

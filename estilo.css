@@ -1,0 +1,44 @@
+.square{
+	width:150px;
+	height:150px;
+	background-color:#e74c3c;
+	transform:translate(400px,250px);
+animation:quadrado 1s ease 1s infinite alternate running;
+}
+@keyframes quadrado{
+  0%{
+  	transform:translate(400px,250px);
+  }
+  50%{
+  	transform:translate(700px,500px);
+  	transform:rotate(180deg);
+  }
+  100%{
+  	transform:translate(400px,250px);
+  	transform:rotate(360rad);
+  }
+}
+.circle{
+	position:absolute;
+    width:200px;
+	height:200px;
+	border-radius:50%;
+	background-color:forestgreen;
+	transform:translate(400px,50px);
+	z-index:-1;
+animation:circulo 2s ease 1s infinite alternate running;
+}
+
+@keyframes circulo{
+	0%{
+      transform: translateX(500px);
+	}
+	50%{
+       transform: translateX(-50px);
+       transform: scale(2);
+	}
+	100%{
+      transform:translateX(500px);
+      transform:scale(1);
+	}
+}
